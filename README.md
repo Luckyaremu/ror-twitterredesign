@@ -1,4 +1,4 @@
- Zela-Fan-Page - RoR Capstone Project
+ Twitter redesign page - RoR Capstone Project
 
 > This project it was built on top of my knowledge of RoR.
 > Idea and design by [Gregoire Veila](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
