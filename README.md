@@ -7,7 +7,7 @@
 
 ## What it does
 
-Its a game Legend of Zelda community page.
+Its Twitter clone.
 
 *As a guest user:*
 
@@ -29,14 +29,12 @@ Its a game Legend of Zelda community page.
 ## Built With
 
 - Ruby v2.6.5
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6.0.3
 
 *Gems used:*
 
 - Devise (for user authentication)
 - Simple_form
-- Omniauth
-- Omniauth - Facebook
 - Faker
 - Will Paginate
 - Gems used for testing:
@@ -51,11 +49,11 @@ Its a game Legend of Zelda community page.
 
 ## Live Demo
 
-[Live Demo Link](https://zelda-community.herokuapp.com/)
+[Live Demo Link]()
 
 ## Video Presentation
 
-[![Watch the video](/app/assets/images/video.png)](https://www.loom.com/share/dee00d81d0af4a46a8eb4bcbc651f663)
+[![Watch the video](/app/assets/images/video.png)]()
 
 
 ## Getting Started
@@ -108,12 +106,11 @@ Open `http://localhost:3000/` in your browser.
 
 ## Author
 
-👤 **Kelly Booster**
+👤 **Aremu Lucky Baba**
 
-- Github: [@kelibst](https://github.com/kelibst)
-- Twitter: [@keli_booster](https://twitter.com/keli_booster)
-- Linkedin: [Kekeli (Jiresse) Dogbevi
-](https://www.linkedin.com/in/kekeli-dogbevi-958272108/)
+- Github: [@Luckyaremu](https://github.com/Luckyaremu)
+- Twitter: [@Luckyaremu]
+- Linkedin: [Aremu Lucky Baba](https://www.linkedin.com/in/lucky-aremu-24807a145/)
 
 ## 🤝 Contributing
 
