@@ -2,17 +2,10 @@
 
 <div class="col-sm-8 m-0 p-0">
   <div class="container-fluid p-0 cover-img">
-   
-    <%= image_tag "/uploads/user/cover_image/9/zelda3.jpg", alt: "cover image", class: "img-contain"%>
+    <%= image_tag "https://previews.123rf.com/images/boule13/boule131408/boule13140800021/30701130-beautiful-background-with-lot-of-different-butterflys.jpg", alt: "cover image", class: "img-contain"%>
   </div>
-  <div class="container-fluid p-4 my-4">
-    <h4 class="display-5 font-weight-bolder text-secondary">What's happening? <span class="text-danger"><i class="fab fa-twitter"></i></span></h4>
 
-    <%= render 'opinions/form', obj: @opinion %>
-
-    
-  </div>
-    <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" data-toggle="tab" href="#post">Post</a>
     </li>
@@ -24,14 +17,19 @@
     </li>
   </ul>
 
-  <!-- Tab panes -->
+  <div class="container-fluid p-4 my-4">
+    <h4 class="display-5 font-weight-bolder text-secondary">What's happening? <span class="text-danger"><i class="fab fa-twitter"></i></span></h4>
+
+    <%= render 'opinions/form', obj: @opinion %>  
+  </div>
+  
   <div class="tab-content">
     <div class="tab-pane container active" id="post">
       <% @opinions.each do |opinion| %>
         <div class="card my-4">
           
           <div class="py-4 card-body mx-4">
-            <h6 class="text-uppercase text-secondary text-underline">Post Content</h6>
+            <h6 class="text-uppercase text-secondary text-underline">ALL PostS</h6>
             <p class="card-title">Author: <%= link_to opinion.user.first_names, user_path(opinion.user), class: "btn text-uppercase"  %></p>
             <p class="opinion-content border-danger border rounded p-4">
                <%= opinion.content %>

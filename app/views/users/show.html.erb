@@ -9,16 +9,8 @@
     <% end %>
 
   </div>
-<% unless current_user != @user %>
-  <div class="container-fluid my-4">
-    <h6 class="text-secondary display-5 font-weight-bolder text-center">What's happening?<span class="text-danger"><i class="fab fa-twitter"></i></span></h6>
 
-    <%= render 'opinions/form', obj: @opinion %>
-    
-  </div>
-<% end %>
-
-    <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" data-toggle="tab" href="#post">Post</a>
     </li>
@@ -29,6 +21,16 @@
       <a class="nav-link" data-toggle="tab" href="#followers">Followers</a>
     </li>
   </ul>
+  
+
+<% unless current_user != @user %>
+  <div class="container-fluid my-4">
+    <h6 class="text-secondary display-5 font-weight-bolder text-center">What's happening?<span class="text-danger"><i class="fab fa-twitter"></i></span></h6>
+
+    <%= render 'opinions/form', obj: @opinion %>
+    
+  </div>
+<% end %>
 
   <!-- Tab panes -->
   <div class="tab-content">
@@ -114,7 +116,7 @@
        
     </div>
   </div>
-    <h4 class="text-center text-secondary my-4 ">List of all Followers</h4>
+    <h4 class="text-center text-secondary my-4 ">Find all Followers here</h4>
       <% Friendship.all.followers(@user).each do |following|%>
       <%if (@current_user.id != following.user.id)%>
       
