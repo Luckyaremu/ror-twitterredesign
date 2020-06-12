@@ -68,13 +68,13 @@
 
   <div class="col-sm-4 py-4">
     <div class="container-fluid my-4">
-      <h6 class="display-6 text-uppercase font-weight-bolder text-secondary">Who to follow <i class="fas float-right fa-recycle"></i></h6> 
+      <h6 class="display-6 text-uppercase font-weight-bolder text-secondary">Who to follow <i class="fas fa-walking"></i></h6> 
     </div>
       <% @users.each do |user| %>
       <% if !following?(user) && @current_user.id != user.id%>
        <div class="card flex-row my-2">
           
-          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="Logo" style="width:120px;" class="card-img-top m-4 rounded-circle">
+          <img src="https://www.resumes.com.ng/wp-content/uploads/2018/10/Passport-Photograph.jpg" alt="Logo" style="width:120px;" class="card-img-top m-4 rounded-circle">
           <div class="card-body text-center">
             <p class="card-title text-center py-4"><%= link_to user.first_names, user_path(user), class: "text-primary  text-capitalize" %></p>
               <% if !following?(user)  %>

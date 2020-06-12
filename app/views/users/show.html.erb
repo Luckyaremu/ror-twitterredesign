@@ -3,7 +3,7 @@
 <div class="col-sm-8 m-0 p-0">
   <div class="container-fluid p-0 cover-img">
     <% if @user.cover_image.url.nil? %>  
-      <%= image_tag "https://images.unsplash.com/photo-1591468069148-5cc79ed1caaa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9", alt: "profile", class: " img-contain"%>
+      <%= image_tag "https://previews.123rf.com/images/boule13/boule131408/boule13140800021/30701130-beautiful-background-with-lot-of-different-butterflys.jpg", alt: "profile", class: " img-contain"%>
     <% else %>
     <%= image_tag @user.cover_image.url.to_s , alt: "logo",  class: "img-contain"%>
     <% end %>
@@ -84,7 +84,7 @@
 
     <div class="my-4 mx-auto">
     <% if @user.photo.url.nil? %>  
-    <%= image_tag "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9", width: "120", class: "rounded-circle"%>
+    <%= image_tag "https://www.resumes.com.ng/wp-content/uploads/2018/10/Passport-Photograph.jpg", width: "120", class: "rounded-circle"%>
       <% else %>
       <%= image_tag @user.photo.url.to_s , alt: "logo", width: 120, class: "rounded-circle"%>
     <% end %>
@@ -121,7 +121,7 @@
        <div class="card flex-row my-2">
        
         <% if following.user.photo.url.nil? %>  
-        <%= image_tag "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9", alt: "profile", width: "120", class: " m-4  rounded-circle"%>
+        <%= image_tag "https://www.resumes.com.ng/wp-content/uploads/2018/10/Passport-Photograph.jpg", alt: "profile", width: "120", class: " m-4  rounded-circle"%>
         <% else %>
         <%= image_tag following.user.photo.url.to_s , alt: "logo", width: 120, class: "m-4 rounded-circle"%>
         <% end %>
