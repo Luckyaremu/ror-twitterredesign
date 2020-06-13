@@ -52,7 +52,7 @@ Its Twitter clone.
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://glacial-gorge-46936.herokuapp.com/users/sign_in)
 
 ## Video Presentation
 
