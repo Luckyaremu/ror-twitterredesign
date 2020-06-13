@@ -56,7 +56,8 @@ Its Twitter clone.
 
 ## Video Presentation
 
-[![Watch the video](https://www.loom.com/share/c3f14f7d14ef403ca45993f1a1314db6)]
+
+[Watch the video](https://www.loom.com/share/c3f14f7d14ef403ca45993f1a1314db6)
 
 
 ## Getting Started
