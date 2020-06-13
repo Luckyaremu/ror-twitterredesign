@@ -32,7 +32,7 @@ Its Twitter clone.
 ## Built With
 
 - Ruby v2.6.5
-- Ruby on Rails v6.0.3
+- Ruby on Rails v5.2.3
 
 *Gems used:*
 
