@@ -3,8 +3,8 @@
 > This project it was built on top of my knowledge of RoR.
 > Idea and design by [Gregoire Veila](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
 
-![screenshot(home)(app/assets/images/Screenshot from 2020-06-13 09-59-46.png)]
-![screenshot(profile)(app/assets/images/Screenshot from 2020-06-13 10-00-11.png)]
+![screenshot](/app/assets/images/Screenshot from 2020-06-13 09-59-46.png)
+![screenshot](/app/assets/images/Screenshot from 2020-06-13 10-00-11.png)
 
 ## What it does
 
