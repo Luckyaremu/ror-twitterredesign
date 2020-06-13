@@ -3,7 +3,8 @@
 > This project it was built on top of my knowledge of RoR.
 > Idea and design by [Gregoire Veila](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
 
-![screenshot](/app/assets/images/screen2.png)
+![screenshot(home)](app/assets/images/Screenshot from 2020-06-13 09-59-46.png)
+![screenshot(profile)](app/assets/images/Screenshot from 2020-06-13 10-00-11.png)
 
 ## What it does
 
@@ -53,7 +54,7 @@ Its Twitter clone.
 
 ## Video Presentation
 
-[![Watch the video](/app/assets/images/video.png)]()
+[![Watch the video](https://www.loom.com/share/c3f14f7d14ef403ca45993f1a1314db6)]()
 
 
 ## Getting Started
