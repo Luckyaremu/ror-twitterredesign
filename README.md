@@ -1,9 +1,11 @@
  Twitter redesign page - RoR Capstone Project
 
-> This project it was built on top of my knowledge of RoR.
-> Idea and design by [Gregoire Veila](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
+This project is to redesign the popular social media applications called Twitter with ruby on rails 
 
+Home page
 ![screenshot](/app/assets/images/Screenshot from 2020-06-13 09-59-46.png)
+
+Profile page
 ![screenshot](/app/assets/images/Screenshot from 2020-06-13 10-00-11.png)
 
 ## What it does
