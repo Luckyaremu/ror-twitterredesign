@@ -7,7 +7,7 @@
 
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#post">Post</a>
+      <a class="nav-link active" data-toggle="tab" href="#post">Tweets</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#comments">Following</a>
@@ -29,7 +29,7 @@
         <div class="card my-4">
           
           <div class="py-4 card-body mx-4">
-            <h6 class="text-uppercase text-secondary text-underline">ALL PostS</h6>
+            <h6 class="text-uppercase text-secondary text-underline">ALL Posts</h6>
             <p class="card-title">Author: <%= link_to opinion.user.first_names, user_path(opinion.user), class: "btn text-uppercase"  %></p>
             <p class="opinion-content border-danger border rounded p-4">
                <%= opinion.content %>
