@@ -3,7 +3,11 @@
 This project is to redesign the popular social media applications called Twitter with ruby on rails 
 
 Home page
-![screenshot](/home/lucky/odin_on_rails/ror-twitterredesign/app/assets/images/Screenshot from 2020-06-13 09-59-46.png)
+![screenshot](doc/Screenshot1.png)
+
+
+Profile page
+![screenshot](doc/Screenshot2.png)
 
 ## What it does
 
