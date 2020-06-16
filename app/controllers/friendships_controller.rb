@@ -14,8 +14,8 @@ class FriendshipsController < ApplicationController
   end
 
   def unfollow
-    @followership = Friendship.where(user_id: current_user.id, follower_id: params[:id])
-    Friendship.destroy(@followership.ids)
+    @followership = Friendship.find_by(user_id: current_user.id, follower_id: params[:id])
+    Friendship.destroy(@followership.id)
     @user = User.find(params[:id])
     respond_to do |format|
       format.html do
@@ -28,6 +28,6 @@ class FriendshipsController < ApplicationController
   private
 
   def follower_params
-    Friendship.where(user_id: current_user.id, follower_id: params[:id].select('id'))
+    Friendship.find_by(user_id: current_user.id, follower_id: params[:id].select('id'))
   end
 end

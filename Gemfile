@@ -46,6 +46,8 @@ gem 'carrierwave', '~> 2.0'
 
 gem 'mini_magick'
 
+gem 'bullet', '~> 6.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
