@@ -19,7 +19,6 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
     end
 
-
     it 'validates user last name' do
       user = User.new(id: 4, last_names: 'aremu', email: 'user@example.com', password: 'passsing')
       expect(user).not_to be_valid
