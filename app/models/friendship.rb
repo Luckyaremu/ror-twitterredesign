@@ -4,5 +4,4 @@ class Friendship < ApplicationRecord
 
   scope :following, ->(user) { where(user_id: user.id) }
   scope :followers, ->(user) { where(follower_id: user.id) }
-  
 end
