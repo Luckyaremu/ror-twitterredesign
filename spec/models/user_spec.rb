@@ -14,14 +14,26 @@ RSpec.describe User, type: :model do
       expect(user.errors.full_messages).to eq(["First names can't be blank",
                                                'First names is too short (minimum is 3 characters)'])
     end
-
-    it 'validates user last name' do
+    it 'validates user first name' do
       user = User.new(id: 4, first_names: 'aremu', email: 'user@example.com', password: 'passsing')
       expect(user).not_to be_valid
     end
 
-    it 'last name should not be blank and not too short' do
+
+    it 'validates user last name' do
+      user = User.new(id: 4, last_names: 'aremu', email: 'user@example.com', password: 'passsing')
+      expect(user).not_to be_valid
+    end
+
+    it 'first name should not be blank and not too short' do
       user = User.new(id: 4, first_names: 'aremu', email: 'user@example.com', password: 'passsing')
+      user.save
+      expect(user.errors.full_messages).to eq(["Last name can't be blank",
+                                               'Last name is too short (minimum is 3 characters)'])
+    end
+
+    it 'last name should not be blank and not too short' do
+      user = User.new(id: 4, last_names: 'aremu', email: 'user@example.com', password: 'passsing')
       user.save
       expect(user.errors.full_messages).to eq(["Last name can't be blank",
                                                'Last name is too short (minimum is 3 characters)'])

@@ -3,6 +3,10 @@ require 'capybara/rspec'
 
 RSpec.describe Friendship, type: :model do
   describe 'Friendship tests' do
+    it { should validate_presence_of(:content) }
+  end
+
+  describe 'associations' do
     it { should belong_to(:user) }
     it { should belong_to(:follower) }
   end
