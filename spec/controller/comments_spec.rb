@@ -5,7 +5,7 @@ describe 'Comment controller', type: :feature do
   before :each do
     m = User.new(email: 'lucky@gmail.com', password: '8710111213')
     m.save
-   
+
     visit '/users/sign_in'
     within('form') do
       fill_in 'user[email]', with: 'lucky@gmail.com'

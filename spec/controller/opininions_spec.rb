@@ -4,7 +4,7 @@ describe 'Opinion controller and view spec', type: :feature do
   before :each do
     a = User.new(name: 'gajksj', email: 'user@example.com', password: 'password1234')
     a.save
-   
+
     visit '/users/sign_in'
     within('form') do
       fill_in 'user[email]', with: 'user@example.com'
