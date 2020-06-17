@@ -18,11 +18,11 @@ describe 'Comment controller', type: :feature do
     within('form') do
       fill_in 'opinions.content', with: 'like your post'
     end
-    click_button 'Save'
+    click_button 'Commit'
     within('new_comment') do
       fill_in 'comment[content]', with: 'something'
     end
-    click_button 'Comment'
+    click_button 'Commit'
     expect(page).to have_content 'something'
   end
 end
