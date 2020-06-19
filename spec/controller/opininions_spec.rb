@@ -1,8 +1,8 @@
 require 'rails_helper'
 require 'capybara/rspec'
-describe 'Opinion controller and view spec', type: :feature do
+describe 'Opinion controller', type: :feature do
   before :each do
-    a = User.new(name: 'gajksj', email: 'user@example.com', password: 'password1234')
+    a = User.new(email: 'user@example.com', password: 'password1234')
     a.save
 
     visit '/users/sign_in'
@@ -12,7 +12,7 @@ describe 'Opinion controller and view spec', type: :feature do
     end
     click_button 'commit'
   end
-  it 'post creation' do
+  it 'opinion creation' do
     visit '/users'
     within('form') do
       fill_in 'opinions.content', with: 'blah blah blah'

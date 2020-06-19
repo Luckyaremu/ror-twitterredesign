@@ -5,8 +5,7 @@ describe 'Friendship controller', type: :feature do
   before :each do
     m = User.new(email: 'lucky@gmail.com', password: '1234567')
     m.save
-    s = User.new(email: 'rhosy@gmail.com', password: '1234567')
-    s.save
+    
     visit '/users/sign_in'
     within('form') do
       fill_in 'user[email]', with: 'lucky@gmail.com'
