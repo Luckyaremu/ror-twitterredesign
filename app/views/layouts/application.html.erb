@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter clone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="row">
+  <div class="container-fluid d-flex">
+  <%= render 'layouts/sidebar' unless !user_signed_in?%>
+ 
+  <div class="container-fluid p-0">
+  <%= render 'layouts/navbar' unless !user_signed_in?%>
+  <%= render 'layouts/messages' unless user_signed_in?%>
+  <%= yield %>
+  </div>
+   </div>
+    
+  </div>
+  </body>
+</html>
