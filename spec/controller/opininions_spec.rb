@@ -1,25 +1,25 @@
 require 'rails_helper'
 require 'capybara/rspec'
 describe 'Testing post controller and views', type: :feature do
-    before :each do
-      a = User.new(first_names: 'lucky', last_name: "aremu", email: 'user@example.com', password: 'password1234')
-      a.save
-      b = User.new(first_names: 'first', last_name: "last", email: 'rhosy@example.com', password: 'password1234')
-      b.save
-      
-      visit '/users/sign_in'
-      within('main') do
-        fill_in 'user[email]', with: 'user@example.com'
-        fill_in 'user[password]', with: 'password1234'
-      end
-      click_button 'commit'
+  before :each do
+    a = User.new(first_names: 'lucky', last_name: 'aremu', email: 'user@example.com', password: 'password1234')
+    a.save
+    b = User.new(first_names: 'first', last_name: 'last', email: 'rhosy@example.com', password: 'password1234')
+    b.save
+
+    visit '/users/sign_in'
+    within('main') do
+      fill_in 'user[email]', with: 'user@example.com'
+      fill_in 'user[password]', with: 'password1234'
     end
-    it 'A valid user can send a post or opinion' do
-      visit '/'
-      within('main') do
-        fill_in 'opinion[content]', with: 'Some random contents'
-      end
-      click_button 'Create Opinion'
-      expect(page).to have_content 'Some random contents'
+    click_button 'commit'
+  end
+  it 'A valid user can send a post or opinion' do
+    visit '/'
+    within('main') do
+      fill_in 'opinion[content]', with: 'Some random contents'
     end
+    click_button 'Create Opinion'
+    expect(page).to have_content 'Some random contents'
+  end
 end
