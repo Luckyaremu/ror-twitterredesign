@@ -1,6 +1,6 @@
 require 'rails_helper'
 require 'capybara/rspec'
-describe 'Testing post controller and views', type: :feature do
+describe 'Testing following feature in views', type: :feature do
     before :each do
       a = User.new(first_names: 'lucky', last_name: "aremu", email: 'user@example.com', password: 'password1234')
       a.save
@@ -15,11 +15,12 @@ describe 'Testing post controller and views', type: :feature do
       click_button 'commit'
     end
     it 'A valid user can send a post or opinion' do
-      visit '/'
-      within('main') do
-        fill_in 'opinion[content]', with: 'Some random contents'
-      end
-      click_button 'Create Opinion'
-      expect(page).to have_content 'Some random contents'
+
+      
+      visit '/users'
+      
+      click_on 'Follow'
+      visit '/users'
+      expect(page).to have_content 'Unfollow'
     end
 end

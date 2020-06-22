@@ -1,28 +1,35 @@
 require 'rails_helper'
 require 'capybara/rspec'
-
-describe 'Comment controller', type: :feature do
+describe 'Testing post controller and views', type: :feature do
   before :each do
-    m = User.new(email: 'luckyaremu@gmail.com', password: '8710111213')
-    m.save
-
+    a = User.new(first_names: 'lucky', last_name: "aremu", email: 'user@example.com', password: 'password1234')
+    a.save
+    b = User.new(first_names: 'first', last_name: "last", email: 'rhosy@example.com', password: 'password1234')
+    b.save
+    
     visit '/users/sign_in'
-    within('form') do
-      fill_in 'user[email]', with: 'luckyaremu@gmail.com'
-      fill_in 'user[password]', with: '8710111213'
+    within('main') do
+      fill_in 'user[email]', with: 'user@example.com'
+      fill_in 'user[password]', with: 'password1234'
     end
-    click_button 'Log in'
+    click_button 'commit'
   end
-  it 'it commments in a post' do
-    visit '/users'
-    within('form') do
-      fill_in 'opinions.content', with: 'like your post'
+
+  it 'should be able to create a comment on a post' do
+    visit '/'
+    within('main') do
+      fill_in 'opinion[content]', with: 'Some random contents'
     end
-    click_button 'Commit'
-    within('new_comment') do
-      fill_in 'comment[content]', with: 'something'
+    click_button 'Create Opinion'
+    
+    within ('form#new_comment') do
+        fill_in "comment[content]", with: "first comment"
+        
     end
-    click_button 'Commit'
-    expect(page).to have_content 'something'
+
+    click_button "Comment"
+    expect(page).to have_content "first comment"
   end
+
+  
 end
